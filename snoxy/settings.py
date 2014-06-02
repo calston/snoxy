@@ -69,11 +69,11 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = abspath('static')
+STATIC_ROOT = abspath('snoxy_static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = '/snoxy_static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
