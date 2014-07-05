@@ -4,12 +4,8 @@ try:
 except:
     from urlparse import urlparse
 
-from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from django.core.urlresolvers import reverse
-from django.forms import CheckboxSelectMultiple, ValidationError
-from django.db.models import Sum
 from django.conf import settings
 
 
