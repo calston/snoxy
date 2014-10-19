@@ -5,13 +5,13 @@ except:
     from urlparse import urlparse
 
 from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
-
+@csrf_exempt
 @login_required
 def index(request):
-
     url = urlparse(settings.SNOXY_HOST)
 
     if url.scheme=='http':
@@ -24,7 +24,7 @@ def index(request):
     else:
         path = request.path
 
-    conn.request("GET", path)
+    conn.request(request.method, path, request.body)
 
     response = conn.getresponse()
 
