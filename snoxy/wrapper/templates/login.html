@@ -42,7 +42,7 @@
 
         <input type="hidden" name="next" value="{{ next }}" />
         <br/>
-        Login with <a href="{% url 'socialauth_begin' backend='google-oauth2' %}?{{ redirect_querystring }}">Google</a>
+        Login with <a href="{% url 'socialauth_begin' backend='google-oauth2' %}?{{ redirect_querystring }}&next={{next}}">Google</a>
         </form>
 
     </div>
