@@ -42,9 +42,17 @@
 
         <input type="hidden" name="next" value="{{ next }}" />
         <br/>
-        Login with <a href="{% url 'socialauth_begin' backend='google-oauth2' %}?{{ redirect_querystring }}&next={{next}}">Google</a>
+        Login with <a id="socauth" href="{% url 'socialauth_begin' backend='google-oauth2' %}?{{ redirect_querystring }}&next={{next}}">Google</a>
         </form>
 
     </div>
+    <script>
+        var hash = window.location.hash.substring(1);
+        var next = document.getElementById("next");
+        var socauth = document.getElementById("socauth");
+
+        next.value = next.value + '#' + hash;
+        socauth.href = socauth.href + '#' + hash;
+    </script>
   </body>
 </html>
