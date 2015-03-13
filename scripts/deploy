@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cp -a snoxy ./build/
+
+${PIP} install -r snoxy/requirements.pip
+

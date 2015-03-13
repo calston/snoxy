@@ -1,4 +1,3 @@
 Django
 gunicorn
-redis
 django-social-auth
