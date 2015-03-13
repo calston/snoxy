@@ -1,0 +1,8 @@
+name: snoxy
+buildscript: scripts/deploy
+postinstall: scripts/postinstall.sh
+pip:
+ - gunicorn
+ - django
+dependencies:
+ - nginx
